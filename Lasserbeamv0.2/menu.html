@@ -2,10 +2,12 @@
 <html>
 <head>
 	<title>LasserBeam</title>
+	<link rel="icon" type="image/png" href="imagenes/hed.png">
 	<meta charset="utf8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="stylesheet.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body onload="cargarcarrousel()">
 
@@ -39,8 +41,6 @@
 
 <div id="carrousel" align="center"></div>
 <div id="mision"></div>
-<!--<div id="produc"></div>
-<div id="servicios"></div>-->
 <div id="btnMas" type="button" onclick="abrirModal()" href="#"><span class="glyphicon glyphicon-plus-sign"></span>	M&aacute;s</div></a>
 <div class="modal fade" id="divMas" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false" >
 	<div  class="modal-dialog">
@@ -63,7 +63,7 @@
       		}
       		function cargarservicios() 
       		{
-        		$('#mision').load("htmls/home.html");
+        		$('#mision').load("htmls/servicios.html");
       		}
 			function abrirModal(){
 				$("#divMas").modal("show");
@@ -130,6 +130,14 @@
 		</div>
 	</footer>
 	<div class="copyright">
+		<div class="container">
+      			<ul class="social">
+        			<li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
+        			<li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
+        			<li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
+        			<li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
+      			</ul>
+  		</div>
 		<div class="container">
 			<ul>
 				<li><a href="">Comunidad</a></li>
