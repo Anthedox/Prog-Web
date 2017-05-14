@@ -1,14 +1,5 @@
 <?php
 ?>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport"
-		content="width=device-width, initial-scale=1">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<title>Registro de alumnos</title>
-	</head>
-<body>
 	<div class="modal-body">	
 	
 		<div class="row">
@@ -66,8 +57,4 @@
 		</button>
 	</div>
 
-		<script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
-		<script src="js/bootstrap.min.js" type="text/javascript"></script>
-		<script src="js/registroPersonal.js" type="text/javascript"></script>
-	</body>
-</html>
+<script src="js/registroPersonal.js" type="text/javascript"></script>
