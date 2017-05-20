@@ -2,7 +2,6 @@ function capturaProducto(){
 	var url = "registrar_producto2.php";
 
 	$.post(url, {
-				id:$("#txtID").val(), 
 				codigo:$("#txtCodigo").val(),
 				nombre:$("#txtNombre").val(),
 				descripcion:$("#txtDescripcion").val(),
@@ -13,3 +12,4 @@ function capturaProducto(){
 					$("#respuesta").html(data);
 				});			
 }
+
