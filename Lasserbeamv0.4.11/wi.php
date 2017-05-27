@@ -9,11 +9,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="page-header">
+    <div class="col-md-1 col-sm-6 col-xs-12 ">
+            <a href="menu.html" ><img  src="imagenes/logo.png" height="100px"></a>
+        </div>
+</div>
     <div class="container" id="contwin">
     <div class="row">
-        <div class="col-md-3 col-sm-6 col-xs-12 ">
-            <img  src="imagenes/logo.png" height="100px">
-        </div>
+        
     </div>
 
     <div class="row">
@@ -58,11 +61,11 @@
                         
                         <div class="col-sm-10 col-sm-offset-1">
                             <label>C&oacute;digo</label>
-                            <input id="txtCodigo" type="text" class="form-control" onkeypress="ValidaID()" maxlength="5">
+                            <input id="txtCodigo" type="text" class="form-control" onkeypress="return validarcodigo(event)" maxlength="5">
                         </div>      
                         <div class="col-sm-10 col-sm-offset-1">
                             <label>Nombre</label>
-                            <input id="txtNombre" type="text" class="form-control" maxlength="20">  
+                            <input id="txtNombre" type="text" class="form-control" onkeypress="return validartexto(event)" maxlength="20">  
                         </div>
                         <div class="col-sm-10 col-sm-offset-1">
                             <label>Descripci&oacute;n</label>
@@ -70,24 +73,19 @@
                         </div>
                         <div class="col-sm-10 col-sm-offset-1">
                             <label>Precio</label>
-                            <input id="txtPrecio" type="text" class="form-control" onkeypress="Validaprecio()" maxlength="10">
+                            <input id="txtPrecio" type="text" class="form-control" maxlength="10" onkeypress="return validarprecio(event)">
                         </div>
                         <ul class="list-inline pull-right">
                         <br>
-                        <br>
-                        <br>
-                        <br>
-                        <br>
-                            <li><button type="button" class="btn btn-success next-step">Continuar</button></li>
+                            <li><button type="button" class="btn btn-success next-step" onclick="capturar()">Continuar</button></li>
                         </ul>
                     </div>
                     <div class="tab-pane" role="tabpanel" id="step2">
                         <h3><b>Categor&iacute;a</b></h3>
-                        <label>
-                            C&oacute;digo: 
-                            
-                        </label>
-
+                        <br>
+                        <label id="resultado"></label>
+                        <br>
+                        <br>
                         <p>Selecciona el tipo de producto</p>
                         <select class="form-control" name="sltcategoria" id="sltcategoria">
                             <?php
@@ -104,11 +102,15 @@
                         <br>
                         <ul class="list-inline pull-right">
                             <li><button type="button" class="btn btn-default prev-step">Atr&aacute;s</button></li>
-                            <li><button type="button" class="btn btn-success next-step">Continuar</button></li>
+                            <li><button type="button" class="btn btn-success next-step" onclick="capturar1()">Continuar</button></li>
                         </ul>
                     </div>
                 <div class="tab-pane" role="tabpanel" id="step3">
                     <h3><b>Almac&eacute;n</b></h3>
+                    <br>
+                    <label id="resultado1"></label>
+                    <br>
+                    <br>
                     <p>Selecciona el almac&eacute;n del producto</p>
                      <select id="sltalmacen" name="sltalmacen" class="form-control">
                      <?php
@@ -174,14 +176,91 @@ function prevTab(elem) {
     $(elem).prev().find('a[data-toggle="tab"]').click();
 }
 
-function ValidaID() {
-    var tecla = event.keyCode;
-    if ((tecla < 48) || (tecla > 57)) 
-    event.returnValue = false;
+$(document).ready(function(){
+   $('#txtCodigo').numeric();    // números
+});
+
+
+function validarcodigo(e)
+{
+    key=e.keyCode ||e.which; //captura entada de texto
+    teclado= String.fromCharCode(key);
+    numero="0123456789";
+    especiales="8-37-38-46";
+    teclado_especial=false;
+    for(var i in especiales){
+        if(key==especiales[i]){
+            teclado_especial=true;
+        }
+    }
+    if (numero.indexOf(teclado)==-1 && !teclado_especial) { //si Lo que ingresamos esta en numero es 1 si no esta es -1 
+        return false; //bloquea la entrada del caracter
+    }
 }
-function Validaprecio() {
-    if ((event.keyCode < 46) || (event.keyCode > 57)) 
-    event.returnValue = false;
+
+function validartexto(e)
+{
+    key=e.keyCode ||e.which; //captura entada de texto
+    teclado= String.fromCharCode(key).toLowerCase(); //Convierte todo el texto a miniscula
+    letras="abcdefghijklmnñopqrstuvwxyz "; //
+    especiales="8-37-38-46-164"; //espacio, flechas, n
+    teclado_especial=false;
+
+    for(var i in especiales){
+        if(key==especiales[i]){
+            teclado_especial=true;break;
+        }
+    }
+    if (letras.indexOf(teclado)==-1 && !teclado_especial) { //si Lo que ingresamos esta en letras es 1 si no esta es -1 
+        return false;                           //bloquea la entrada del caracter
+    }
+}
+
+function validarprecio(e)
+{
+    key=e.keyCode ||e.which; //captura entada de texto
+    teclado= String.fromCharCode(key);
+    numero="0123456789.";
+    especiales="8-37-38-46";
+    teclado_especial=false;
+    for(var i in especiales){
+        if(key==especiales[i]){
+            teclado_especial=true;
+        }
+    }
+    if (numero.indexOf(teclado)==-1 && !teclado_especial) { //si Lo que ingresamos esta en numero es 1 si no esta es -1 
+        return false; //bloquea la entrada del caracter
+    }
+}
+
+function capturar(){
+    var Codigo=document.getElementById("txtCodigo").value;
+    var Nombre=document.getElementById("txtNombre").value;
+    var Descripcion=document.getElementById("txtDescripcion").value;
+    var Precio=document.getElementById("txtPrecio").value;
+     
+     document.getElementById("resultado").innerHTML=" \
+            C&oacute;digo: "+Codigo+" \
+            <br>Nombre: "+Nombre+" \
+            <br>Descripci&oacute;n: "+Descripcion+" \
+            <br>Precio: "+Precio;
+}
+function capturar1(){
+
+    var Codigo=document.getElementById("txtCodigo").value;
+    var Nombre=document.getElementById("txtNombre").value;
+    var Descripcion=document.getElementById("txtDescripcion").value;
+    var Precio=document.getElementById("txtPrecio").value;
+    //var Categoria=document.getElementById("sltcategoria").text;   
+    var lista = document.getElementById("sltcategoria");
+    var Categoria = lista.options[lista.selectedIndex].text;
+
+    document.getElementById("resultado1").innerHTML=" \
+            C&oacute;digo: "+Codigo+" \
+            <br>Nombre: "+Nombre+" \
+            <br>Descripci&oacute;n: "+Descripcion+" \
+            <br>Precio: "+Precio+" \
+            <br>Categor&iacute;a: "+Categoria;
 }
     </script>
 </body>

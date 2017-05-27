@@ -57,7 +57,8 @@ p{
   position: fixed;}
 /* cambiar el color de la letra a la barra */
 .navbar-wrapper .navbar-nav > li > a {
-    color: #FAFAFA;}
+    color: #FAFAFA;
+    font-size: 16px;}
 
 /* cambiar el color de la letra a la barra cuando pasa el mouse*/
 .navbar-wrapper .navbar-nav > li > a:hover, .navbar-wrapper .navbar-nav > li > a:focus {
@@ -120,14 +121,41 @@ p{
     margin-top: 20px;}
   .navbar-wrapper .container {
     padding-right: 15px;
-    padding-left: 15px;}
+    padding-left: 15px;
+  }
   .navbar-wrapper .navbar {
     padding-right: 0;
-    padding-left: 0;}
+    padding-left: 0;
+    }
+
 
   /* Se redondean las esquinas */
   .navbar-wrapper .navbar {
     border-radius: 4px;}
+
+    .wizard {
+        width: 90%;
+        height: auto !important;
+    }
+
+    span.round-tab {
+        font-size: 16px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .wizard .nav-tabs > li a {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .wizard li.active:after {
+        content: " ";
+        position: absolute;
+        left: 30%;
+    }
 }
 
 /*MVV*/
@@ -426,13 +454,11 @@ p{
 .wizard {
     margin: 20px auto;
     background: #fff;
-    /* background-color: black;
-  opacity: .8;*/
 }
 /*linea del puntero*/
 .wizard .nav-tabs {
     position: relative;
-    margin: 50px auto;
+    margin: 40px auto;
     margin-bottom: 0;
     border-bottom-color: #BDBDBD;
         /*#e0e0e0;*/
@@ -543,35 +569,4 @@ span.round-tab:hover {
     margin-top: 0;
 }
 
-@media( max-width : 585px ) {
 
-    .wizard {
-        width: 90%;
-        height: auto !important;
-    }
-
-    span.round-tab {
-        font-size: 16px;
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
-    }
-
-    .wizard .nav-tabs > li a {
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
-    }
-
-    .wizard li.active:after {
-        content: " ";
-        position: absolute;
-        left: 35%;
-    }
-}
-
-#imawiz
-{
-  height: 50%;
-  
-}
