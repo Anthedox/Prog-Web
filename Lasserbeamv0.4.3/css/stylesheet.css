@@ -1,0 +1,18 @@
+body{
+	background-color: white;
+}
+h5
+{
+	color: white;}
+nav{
+	width: 100%;
+	z-index: 1;
+	position: absolute;
+	top: 30px;
+	left: 90px;
+	text-align: center;}
+#mision{
+	position: relative;
+	clear: left;
+	float: left;
+}
