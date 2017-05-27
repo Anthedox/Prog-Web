@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LasserBeam</title>
+	<link rel="icon" type="image/png" href="imagenes/hed.png">
+	<meta charset="utf8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body onload="cargarcarrousel()">
+
+<div class="navbar-wrapper">
+  <div class="container">
+
+    <nav class="navbar navbar-inverse navbar-static-top">
+    	<div class="contianer">
+	        <div class="navbar-header">        	
+	              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	                <span class="icon-bar"></span>
+	              </button>
+	        	<a href="#"><img id="imglogo" src="imagenes/logo.png"></a>
+	        </div>
+
+	        <div id="navbar" class="navbar-collapse collapse">
+	          <ul class="nav navbar-nav">
+	            <li><a href="#hom" onclick="ocultar()"><span class="glyphicon glyphicon-home "></span></a></li>
+	            <li><a href="#cont" onclick="cargarmision(),mostrar()">Nosotros </a></li>	            
+	            <li><a href="#cont" onclick="cargarproductos(),mostrar()">Productos</a></li>
+	            <li><a href="#cont" onclick="cargarservicios(),mostrar()">Servicios</a></li>
+	            <li><a href="#cont" onclick="abrirModal2()">Reg&iacute;strate</a></li>
+	            <li><a href="#cont" onclick="cargarmapa(),mostrar()">Ubicaci&oacute;n</a></li>
+	          </ul>
+	        </div>
+        </div>
+    </nav>
+  </div><!-- /container -->
+</div><!-- /navbar wrapper -->
+
+<div id="carrousel" align="center"></div>
+<div id="cont"></div>
+<div id="btnMas" type="button" onclick="abrirModal()" href="#"><span class="glyphicon glyphicon-plus-sign"></span>	M&aacute;s</div></a>
+<div class="modal fade" id="divMas" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false" >
+	<div  class="modal-dialog">
+		<div id="contenidoModal" class="modal-content">
+		</div>
+	</div>			
+</div>
+
+		<script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			function cargarcarrousel() 
+      		{
+        		$('#carrousel').load("htmls/carrousel.html"); 
+        	}
+    		function cargarmision() 
+      		{
+        		$('#cont').load("htmls/mvv.html");
+      		}
+      		function cargarservicios() 
+      		{
+        		$('#cont').load("htmls/servicios.html");
+      		}
+			
+			function cargarproductos(){
+				$("#cont").load("htmls/product.html")
+			}
+			function cargarmapa()
+			{
+				$('#cont').load("htmls/mapa.html")
+			}
+			function abrirModal(){
+				$("#divMas").modal("show");
+				$("#contenidoModal").load("htmls/mas.html")
+			}
+			function abrirModal2(){
+				$("#divMas").modal("show");
+				$("#contenidoModal").load("registrar_personal.php")
+			}
+			function cerrarModal(){
+				$("#divMas").modal("hide");
+			}
+			function ocultar(){
+				$('#cont').hide();
+			}
+			function mostrar(){
+				$('#cont').show();
+			}
+			function cargarregistro(){
+				$("#cont").load("registrar_personal.php");
+			}			
+    	</script>
+	</body>
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<h2 class="title">Escribenos</h2>
+					<form action="./">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Email">
+							<span class="input-group-btn"> 
+								<button class="btn btn-default" type="button">
+									<i class="glyphicon glyphicon-ok"></i>
+								</button>
+							</span>
+						</div>
+					</form>
+				</div>
+				<div class="col-md-3">
+					<h2 class="title"> Redes Sociales</h2>
+					<ul>
+						<li><a href="https://www.facebook.com/lasserbeam.irapuato.3?fref=ts" target="blank">Facebook</a></li>
+						<li><a href="">Twiter</a></li>
+						<li><a href="">Instagram</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h2 class="title"> Mapa del Sitio</h2>
+					<ul>
+						<li><a href="#hom" onclick="ocultar()">Inicio</a></li>
+						<li><a href="#cont" onclick="cargarmision(),mostrar()">Quienes somos</a></li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h2 class="title">Contacto</h2>
+					<p><strong>Google Inc.</strong></p>
+					<p><i class="glyphicon glyphicon-map-marker"></i> Av. Guadalupe Victoria Esq. Opalo #101</p>
+					<p>Las arboledas CP:36520</p>
+					<p><i class="glyphicon glyphicon-earphone"></i> Tel. 6252564 y 6256555</p> 
+				</div>  
+			</div>
+		</div>
+	</footer>
+	<div class="copyright">
+		<div class="container">
+      			<ul class="social">
+        			<li> <a href="https://www.facebook.com/lasserbeam.irapuato.3?fref=ts" target="blank"> <i class=" fa fa-facebook">   </i> </a> </li>
+        			<li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
+        			<li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
+        			<li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
+      			</ul>
+  		</div>
+		<div class="container">
+			<ul>
+				<li><a href="">Comunidad</a></li>
+				<li><a href="">Terminos de uso</a></li>
+				<li><a href="">Privacidad y condiciones</a></li>
+			</ul>
+		</div>
+	</div>
+</html>

@@ -1,0 +1,572 @@
+
+nav{
+  font-family: tahoma;
+}
+body {
+  padding-bottom: 0px;
+  color: #5a5a5a;
+  height: 100%;
+  font-family: tahoma;}
+
+footer {
+  font-family: tahoma;
+  opacity: .8;
+  width: 100%;  
+  background: #272d34;
+  color: white;
+  padding-top: 25px;
+  padding-bottom: 25px;}
+.title{
+  font-size: 25px;}
+.title .p{
+  color: #777;
+  font-size: 15px;
+  margin-top: 8px;}
+footer ul{
+  margin-left: 0px;}
+footer  ul li a{
+  color: #999;
+  display: block;
+  padding: 2px;}
+.copyright{
+  background-color: #1a1e23;
+  color: #777;
+  padding: 8px;}
+.copyright ul{
+  display: inline-block;
+  float: right;
+  list-style-type:  none;
+  margin: 0px;}
+.copyright ul li{
+  float: left;
+  margin-right: 16px;}
+.copyright ul li a{
+    color: white;}
+p{
+  text-align: justify;}
+/* Editar navbar
+-------------------------------------------------- */
+.navbar-wrapper {
+  font-size: 18px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  transition:.5s ease;
+  position: fixed;}
+/* cambiar el color de la letra a la barra */
+.navbar-wrapper .navbar-nav > li > a {
+    color: #FAFAFA;
+    font-size: 16px;}
+
+/* cambiar el color de la letra a la barra cuando pasa el mouse*/
+.navbar-wrapper .navbar-nav > li > a:hover, .navbar-wrapper .navbar-nav > li > a:focus {
+    color: #ecdbff;
+    transition:.5s ease;
+    background-color:  #59b678;}
+
+/* cambiar el color de la letra y fonde a la barra cuando se selecciona*/
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #ecdbff;
+  background-color: #59b678;}
+
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: #41830F;}
+.navbar-wrapper .navbar .container {
+  width: auto;}
+
+  /* Cambiar el carrusel
+-------------------------------------------------- */
+
+/* Clase carrusel */
+.carousel{
+  height: 500px;
+  width: 100%;
+  text-align: center;}
+
+#myCarousel{
+  width: 100%;}
+/* Altura del contenedor de items */
+.carousel .item{
+  height: 500px;
+  background-color:#bbb;}
+/* Formato de las imagenes */
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;}
+
+#imglogo{
+  height: 50px;
+  width: 150px;
+  position: absolute;
+  left: 0;}
+
+@media (min-width: 768px) {
+
+  #imglogo{
+  height: 50px;
+  width: 150px;  
+  position: relative;}
+  /* Si tiene cuando menos 768px, toma este estilo */
+  .navbar-wrapper {
+    margin-top: 20px;}
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+    }
+
+
+  /* Se redondean las esquinas */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;}
+
+    .wizard {
+        width: 90%;
+        height: auto !important;
+    }
+
+    span.round-tab {
+        font-size: 16px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .wizard .nav-tabs > li a {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .wizard li.active:after {
+        content: " ";
+        position: absolute;
+        left: 30%;
+    }
+}
+
+/*MVV*/
+.prueba:hover {
+  background-color: #2F3D3A;
+  transition:.8s ease;}
+.prueba:hover .img-circle{
+  transition:.8s ease;
+  height: 150px;
+  width: 150px;}
+.mis{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #F5F5F5;
+  color: #777;
+  opacity: 0.85;}
+.p2{
+  color: #777;
+  font-size: 17px;}
+.texto p:hover{
+  transition:.5s ease;
+  color:white;  }
+/*Mas*/
+#btnMas{
+  padding-top: 15px;
+  border:0px;
+  color: white;
+  height: 50px;
+  width: 100%;
+  font-size: 15px;
+  background-color: #41830F;
+  text-align: center;}
+#btnMas:hover{
+  opacity: .9;
+  color:white;
+  background-color: #41830F;}
+
+  /*modal*/
+.modal-content{
+  background-color: black;
+  opacity: .95;}
+#org{
+  text-align: center;
+  position: relative;
+  padding-top: 50px;
+  margin-bottom: 350px;}
+  .organigrama * {
+  margin: 0px;
+  padding: 0px;}
+
+.organigrama ul {
+  padding-top: 20px;
+  position: relative;}
+
+.organigrama li {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  padding: 20px 5px 0px 5px;
+  position: relative;}
+
+.organigrama li::before, .organigrama li::after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  right: 50%;
+  border-top: 2px solid #41830F;
+  width: 50%;
+  height: 20px;}
+
+.organigrama li::after{
+  right: auto;
+  left: 50%;
+  border-left: 2px solid #41830F;}
+.organigrama li:only-child::before, .organigrama li:only-child::after {
+  display: none;}
+
+.organigrama li:only-child {
+  padding-top: 0;}
+
+.organigrama li:first-child::before, .organigrama li:last-child::after{
+  border: 0 none;}
+
+.organigrama li:last-child::before{
+  border-right: 2px solid #41830F;
+  -webkit-border-radius: 0 5px 0 0;
+  -moz-border-radius: 0 5px 0 0;
+  border-radius: 0 5px 0 0;}
+
+.organigrama li:first-child::after{
+  border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  -moz-border-radius: 5px 0 0 0;
+}
+
+.organigrama ul ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 2px solid #41830F;
+  width: 0;
+  height: 20px;}
+
+.organigrama li a {
+  border: 2px solid #41830F;
+  padding: 1em 0.75em;
+  text-decoration: none;
+  color: #333;
+  background-color:#F4F7EB;
+  font-family: tahoma;
+  font-size: 15px;
+  display: inline-block;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  transition: all 500ms;}
+
+.organigrama li a:hover {
+  border: 2px solid #fff;
+  color: #ddd;
+  background-color: #41830F;
+  display: inline-block;}
+
+.organigrama > ul > li > a {
+  font-size: 1em;
+  font-weight: bold;}
+
+.organigrama > ul > li > ul > li > a {
+  width: 8em;}
+/*politicas*/
+.poli{
+  padding-top: 30px;
+  color: white;
+  font-size: 15px;}
+.p{
+  color: #41830F;
+  font-size: 20px;
+  font-weight: 200;}
+.ho{
+  background-color: #f5f5f5;}
+  /*services*/
+.ourservice{
+  padding:25px;
+  border-bottom: 1px solid #8A9190;
+  text-align: justify;
+  color: white;
+  background-color: #f5f5f5;}
+.ourservice:hover{
+  background-color: #2F3D3A;
+  transition:.7s ease;}
+.ourservice:hover .pp{
+  color: white;}
+.titlep{
+  color: #41830F;
+  font-size: 40px;
+  font-weight: 300;}
+.titlep:hover{
+  text-decoration: underline;
+}
+.subtitle{
+  text-align: left;
+  font-size: 25px;
+  color: black;}
+.ourservice:hover .subtitle{
+  color:#41830F ;}
+.pp{
+  font-size: 18px;
+  color: #777;}
+/*productos-------------------------------------------------------------------------------*/
+.prod:hover{
+   opacity:.5;
+   transition:.5s ease;
+   color:#41830F;}
+.textoprod{
+  color: red;
+  font-size: 25px;
+  position: absolute;
+  top:40%;
+  left: 15%;
+  background-color:rgba(0,0,0,0.6);}
+/*social*/
+.social {
+  float: left;}
+.social li {
+  background: none repeat scroll 0 0 #B5B5B5;
+  border: 2px solid #B5B5B5;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  float: left;
+  height: 36px;
+  line-height: 36px;
+  margin: 0 8px 0 0;
+  padding: 0;
+  text-align: center;
+  width: 36px;
+  transition: all 0.5s ease 0s;
+  -moz-transition: all 0.5s ease 0s;
+  -webkit-transition: all 0.5s ease 0s;
+  -ms-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+}
+.social li:hover {
+  transform: scale(1.15) rotate(360deg);
+  -webkit-transform: scale(1.1) rotate(360deg);
+  -moz-transform: scale(1.1) rotate(360deg);
+  -ms-transform: scale(1.1) rotate(360deg);
+  -o-transform: scale(1.1) rotate(360deg);
+}
+.social li a {
+  color: #EDEFF1;
+}
+.social li:hover {
+  border: 2px solid #2c3e50;
+  background: #2c3e50;
+}
+.social li a i {
+  font-size: 16px;
+  margin: 0 0 0 5px;
+  color: #EDEFF1 !important;}
+/*productos-------------------------------------------------------------------------------*/
+.prod:hover{
+   opacity:.5;
+   transition:.5s ease;
+   color:#41830F;
+  width: 102%;
+  border: solid;
+  border-color: rgba(160,168,160,0.6);}
+.tituloprod{
+  color: #068A04;
+  font-size: 25px;
+  font-weight:800;
+  position: absolute;
+  top:50%;
+  left: 23%;
+  text-align: center;
+  background-color: rgba(240,240,240,0.9);}
+.tituloprod:hover{
+  text-decoration: underline;
+}
+.textoprod{
+  color: gray;
+  font-size: 16px;
+  font-weight:800;
+  position: absolute;
+  top:65%;
+  left: 20%;
+  text-align: left;
+ background-color: rgba(240,240,240,0.7);}
+.prod{
+  padding: 20px;
+  left: 0;
+  right: 0;
+  height: 300px;
+  width: 100%;
+  padding-bottom: 15px;
+}
+.form label{
+  margin-left:60px;
+}
+.form input {
+  display: block;
+  padding: 5px;
+  width: 80%;
+  margin:5px 60px;
+  font-size: 15px;}
+.form input [type="submit"]{
+  background: linear-gradient(rgb(68,146,216),rgb(25,75,121));
+  border:0;
+  color: white;
+  opacity: 0.8;
+  cursor: pointer;
+  border-radius:10px;
+  margin-bottom: 0;}
+.form input[type="submit"]:hover{
+  opacity: 1;
+}
+.form input[type="submit"]:active{
+  transform:scale(0.50);
+}
+.btnregistrar{
+  margin-left: 60px;
+}
+.label
+{
+  color: white;
+}
+/*-------------------------------------wizard------------------------------------------*/
+
+/*fondo wizard*/
+.wizard {
+    margin: 20px auto;
+    background: #fff;
+}
+/*linea del puntero*/
+.wizard .nav-tabs {
+    position: relative;
+    margin: 40px auto;
+    margin-bottom: 0;
+    border-bottom-color: #BDBDBD;
+        /*#e0e0e0;*/
+}
+/*barra de pasos*/
+.wizard > div.wizard-inner {
+    position: relative;
+}
+/*linea que une las opciones*/
+.connecting-line {
+    height: 2px;
+    background: #BDBDBD;
+    position: absolute;
+    width: 80%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    z-index: 1;
+}
+
+.wizard .nav-tabs > li.active > a, .wizard .nav-tabs > li.active > a:hover, .wizard .nav-tabs > li.active > a:focus {
+    color: #555555;
+    cursor: default;
+    border: 0;
+    border-bottom-color: transparent;
+}
+
+span.round-tab {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    display: inline-block;
+    border-radius: 100px;
+    background: #fff; /*circulo fondo*/
+    border: 2px solid #BDBDBD; /*borde*/
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    font-size: 25px;
+}
+/*color iconos*/
+span.round-tab i{
+    color:#848484;
+}
+/*Circulo contorno seleccionado*/
+.wizard li.active span.round-tab {
+    background: #fff;
+    border: 2px solid #59b678;
+    
+}
+/*incono seleccionado*/
+.wizard li.active span.round-tab i{
+    color: #59b678;
+}
+/*cuando selecionas un icono desde la barra*/
+span.round-tab:hover {
+    color: #59b678;
+    border: 2px solid #333;
+}
+/*sepracion entre circulo*/
+.wizard .nav-tabs > li {
+    width: 25%;
+}
+
+.wizard li:after {
+    content: " ";
+    position: absolute;
+    left: 46%;
+    opacity: 0;
+    margin: 0 auto;
+    bottom: 0px;
+    border: 5px solid transparent;
+    border-bottom-color: #59b678;
+    transition: 0.1s ease-in-out;
+}
+/* punterito*/
+.wizard li.active:after {
+    content: " ";
+    position: absolute;
+    left: 46%;
+    opacity: 1;
+    margin: 0 auto;
+    bottom: 0px;
+    border: 10px solid transparent;
+    border-bottom-color: #59b678;
+}
+
+.wizard .nav-tabs > li a {
+    width: 70px;
+    height: 70px;
+    margin: 20px auto;
+    border-radius: 100%;
+    padding: 0;
+}
+
+.wizard .nav-tabs > li a:hover {
+    background: transparent;
+}
+/*div de cuerpo*/
+.wizard .tab-pane {
+    position: relative;
+    padding-top: 50px;
+}
+
+.wizard h3 {
+    margin-top: 0;
+}
+
+
